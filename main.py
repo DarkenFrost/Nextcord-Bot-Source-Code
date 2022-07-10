@@ -17,10 +17,6 @@ intents.messages = True
 bot = commands.Bot(command_prefix="?", intents=intents)
 botversion = 'Beta 1.0'
 
-def remove(afk):
-    if "(AFK)" in afk.split():
-        return " ".join(afk.split()[1:])
-
 @bot.event
 async def on_ready():
     print("★★★•••★•••★★★•••★•••★★★\nLogged in as "+str(bot. user)+"\nBot Id = "+str(bot.user.id)+"\n""I am in "+str(botversion)+"\n★★★•••★•••★★★•••★•••★★★")
